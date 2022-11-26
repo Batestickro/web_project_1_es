@@ -86,13 +86,13 @@ li {
   position: absolute;
   top: 64px;
   right: 0;
-  background-color: #2F80ED
+  background-color: #2F80ED;
 }
 
 
 /* bloque mayor contenido  */
 .content {
-  margin: 100px 0 0 ;
+  margin: 100px 0 0;
 }
 
 
