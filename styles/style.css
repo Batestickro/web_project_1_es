@@ -1,3 +1,19 @@
+@import url("normalize.css");
+
+
+
+/* Ajustes generales */
+a {
+  text-decoration: none;
+}
+
+.header__link, .feynman__link {
+  color: #2F80ED;
+}
+
+li {
+  list-style-type: none;
+}
 .page {
   min-width: 1100px;
   /* we don't know how to make mobile versions of websites yet, */
@@ -9,23 +25,303 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+
+
+/* Primera parte encabezado */
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* parameters for the header section */
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+
+.logo {
+  z-index: 1;
+}
+
+.logo_place_header {
+  width: 154px;
+  height: 31px;
+  position:absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  font-size: 102px;
+  font-weight: bold;
+  line-height: 96px;
+  width: 730px;
+  margin: 0 0 0 64px;
+  z-index: 1;
+}
+
+.header__subtitle {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  width: 388px;
+  margin: 0 0 0 64px;
+  position: absolute;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.header__main-illustration {
+  width: 756px;
+  height: 608px;
+  position: absolute;
+  right: 64px;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* here we have two examples of selectors in order to remind you how to set styles for elements */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  background-color: #2F80ED
+}
+
+
+/* bloque mayor contenido  */
+.content {
+  margin: 100px 0 0 ;
+}
+
+
+/* Segunda parte descripcion */
+.description {
+  display: flex;
+  justify-content: center;
+} 
+
+.description p {
+  margin: 0;
+}
+
+.two-columns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+  color: #2F80ED;
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.two-columns__main-text{
+  width: 80%;
+  min-width: 784px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.two-columns__paragaph, .two-columns__span-accent {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+
+
+/* Tercera parte datos y figuras */
+.digits {
+  padding: 100px 0;
+}
+
+.section-title {
+  line-height: 1.15;
+  font-size: 60px;
+  width: 60%;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.table {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.table p {
+  margin: 0;
+}
+
+.table__cell_theme_light {
+  width: 250px;
+  margin:60px 0 0;
+}
+
+.table__heading {
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.table__text {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.table__span-author {
+  display: block;
+  margin: 20px 0 0;
+}
+
+
+
+/* Cuarta parte tecnica feynman */
+.feynman {
+  height: 790px;
+  background: #F2F2F2 url(../images/feynman.png) no-repeat bottom left/867px 637px;
+  position: relative;
+}
+
+.feynman__title {
+  margin: 0 auto 70px;
+  padding: 100px 0 0;
+  text-align: center;
+  font-size: 120px;
+  line-height: 1.15;
+  width: 775px;
+}
+
+.feynman__subtitle, .feynman__link {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: normal;
+}
+
+.feynman__subtitle {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+}
+
+
+
+/* Quinta parte Kaufman principios para nuevas habilidades */
+.kaufman {
+  color: #FFF;
+  background: #1F1F1F;
+  position: relative;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  width: 660px;
+  height: 636px;
+  position: absolute;
+  right: -124px;
+}
+
+.section-title_theme_dark {
+  padding: 90px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.table_theme_dark {
+  margin-bottom: 90px;
 }
 
 /* including elements with key-value modifiers */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+  margin: 80px 0 0;
+  z-index: 1;
 }
+
+
+
+/* Sexta parte footer */
+.footer{
+  min-height: 350px;
+  padding: 60px 0 40px;
+  background: #1F1F1F;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__columns {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column h3 {
+  margin: 0 0 20px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+}
+
+.footer__author {
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__list {
+  padding: 0;
+}
+
+.footer__column-link {
+  color: #FFF;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__social-icons {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+
